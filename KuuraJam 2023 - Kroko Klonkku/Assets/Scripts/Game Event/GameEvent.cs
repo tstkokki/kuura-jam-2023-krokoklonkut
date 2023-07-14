@@ -10,7 +10,7 @@ public class GameEvent : ScriptableObject
 
     public void Raise()
     {
-        for (int i = listeners.Count-1; i > 0; i--)
+        for (int i = listeners.Count - 1; i > 0; i--)
         {
             listeners[i].Invoke();
         }
@@ -18,12 +18,13 @@ public class GameEvent : ScriptableObject
 
     public void Add(GameEventListener listener)
     {
-
-        listeners.Add(listener);
+        if (!listeners.Contains(listener))
+            listeners.Add(listener);
     }
 
     public void Remove(GameEventListener listener)
     {
-        listeners.Remove(listener);
+        if (listeners.Contains(listener))
+            listeners.Remove(listener);
     }
 }

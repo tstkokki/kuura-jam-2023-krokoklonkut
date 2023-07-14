@@ -8,11 +8,6 @@ public class GameEventListener : MonoBehaviour
     public GameEvent gameEvent;
     public UnityEvent _event;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     public void Invoke()
     {
