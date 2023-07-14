@@ -7,12 +7,12 @@ Apply water to make people leave the sauna to avoid *Sauna Klonkku* from appeari
 
 
 
-##Portal
+#Portal
 ListaSaunoista
 LisääUkkoSaunaan(Ukko)
 //Katsoo mihin saunaan on portaali auki ja heittää ukon sinne
 
-##Sauna
+#Sauna
 Lista ukoista
 LisääUkko(Ukko)
 //Päivitetään Klonkut
@@ -20,10 +20,10 @@ PoistaUkko(Ukko)
 //Päivitetään Klonkut
 
 
-##Suihku
+#Suihku
 
 
-##Ukko
+#Ukko
 IsKlonkku boolean
 LöylyRes
 Hp
