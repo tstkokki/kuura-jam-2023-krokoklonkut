@@ -2500,7 +2500,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 3412128393363882475, guid: c2b36c48088f49d4a83b6dc89399441e,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 18a895aa23a6b7a44b19d973fa0d6fea, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 05c0ce5a528f84a4d948e3d5cb941059, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2832,6 +2832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   creditsScreen: {fileID: 447689072}
   settingsScreen: {fileID: 836949778}
+  saunaClip: {fileID: 8300000, guid: fc557741298ddcf4ca180cb88f669925, type: 3}
 --- !u!82 &1136000287
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2843,11 +2844,11 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 3127144909453159159, guid: c2b36c48088f49d4a83b6dc89399441e,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: caf57133eef87a147a47a765326e02c4, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
