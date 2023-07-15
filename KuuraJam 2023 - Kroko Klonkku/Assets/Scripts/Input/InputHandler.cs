@@ -25,7 +25,7 @@ public class InputHandler : MonoBehaviour
     public void ChangeCamera(InputAction.CallbackContext context)
     {
         if (IsPressed(context))
-            valvontaKamerat.VaihdaKameraa((int)context.ReadValue<float>());
+            valvontaKamerat.VaihdaKameraa((int)Mathf.Clamp(context.ReadValue<float>(),-1,1));
 
     }
 
