@@ -9,12 +9,17 @@ public class MainMenu : MonoBehaviour
     private GameObject creditsScreen;
     [SerializeField]
     private GameObject settingsScreen;
+    private AudioSource audioSource;
+    [SerializeField]
+    private AudioClip saunaClip;
 
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         creditsScreen.SetActive(false);
         settingsScreen.SetActive(false);
+        InvokeRepeating("playSaunaSound", 0f, 7f);
     }
 
     public void onPlayButtonClick()
@@ -44,5 +49,10 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
         Debug.Log("Quit");
 
+    }
+
+    private void playSaunaSound()
+    {
+        audioSource.PlayOneShot(saunaClip);
     }
 }
