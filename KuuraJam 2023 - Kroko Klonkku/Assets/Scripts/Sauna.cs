@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Sauna : MonoBehaviour
 {
-    
-
+    public SaunaUkkoLista Saunojat;
+    public int LoylyVoima = 30;
     public void LoylyaKiukaaseen()
     {
-        Debug.Log("Löylyä!");
+        foreach (var ukko in Saunojat.GetList())
+        {
+            ukko.OttaaLoylya(LoylyVoima);
+        }
     }
 }
