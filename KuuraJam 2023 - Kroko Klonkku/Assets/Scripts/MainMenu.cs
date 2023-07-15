@@ -16,10 +16,8 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
         creditsScreen.SetActive(false);
         settingsScreen.SetActive(false);
-        InvokeRepeating("playSaunaSound", 0f, 7f);
     }
 
     public void onPlayButtonClick()
