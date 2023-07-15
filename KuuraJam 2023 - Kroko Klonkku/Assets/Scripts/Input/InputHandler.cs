@@ -6,21 +6,20 @@ using UnityEngine.InputSystem;
 public class InputHandler : MonoBehaviour
 {
     CameraControl valvontaKamerat;
+    LoylynHeitto loyly;
+    PortalControl portal;
 
     private void Awake()
     {
         valvontaKamerat = GetComponent<CameraControl>();
+        loyly = GetComponent<LoylynHeitto>();
+        portal = GetComponent<PortalControl>();
     }
 
     public void HeitaLoyly(InputAction.CallbackContext context)
     {
         if (IsPressed(context))
-            Debug.Log("Heitä löylyä");
-    }
-
-    private static bool IsPressed(InputAction.CallbackContext context)
-    {
-        return context.performed && context.ReadValue<float>() != 0;
+            loyly.Heita();
     }
 
     public void ChangeCamera(InputAction.CallbackContext context)
@@ -42,28 +41,33 @@ public class InputHandler : MonoBehaviour
     public void Portaali1(InputAction.CallbackContext context)
     {
         if (IsPressed(context))
-            Debug.Log("Portaali 1");
+            portal.Aseta(0);
     }
 
     public void Portaali2(InputAction.CallbackContext context)
     {
         if (IsPressed(context))
-            Debug.Log("Portaali 2");
+            portal.Aseta(1);
 
     }
 
     public void Portaali3(InputAction.CallbackContext context)
     {
         if (IsPressed(context))
-            Debug.Log("Portaali 3");
+            portal.Aseta(2);
 
     }
     
     public void Pause(InputAction.CallbackContext context)
     {
         if (IsPressed(context))
-            Debug.Log("Portaali 3");
+            Debug.Log("pause");
 
     }
 
+
+    private static bool IsPressed(InputAction.CallbackContext context)
+    {
+        return context.performed && context.ReadValue<float>() != 0;
+    }
 }
