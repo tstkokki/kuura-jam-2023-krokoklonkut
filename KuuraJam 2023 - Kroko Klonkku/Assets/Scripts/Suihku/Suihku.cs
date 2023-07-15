@@ -7,11 +7,11 @@ public class Suihku : MonoBehaviour
     public GameEvent suihkuIsFree;
     public GameEvent suihkuIsOccupied;
 
-    public MovementScriptPlaceholder suihkuttelijanMovementScript;
+    public MovementScript suihkuttelijanMovementScript;
 
     public SaunaUkkoLista suihkuUkot;
     public SaunaUkko latestUkko;
-    public int suihkuUkkoThreshold;
+    public int suihkuUkkoThreshold = 5;
     public int minTemp = 10;
     public int maxTemp = 90;
     public int temperature = 50;
@@ -19,6 +19,7 @@ public class Suihku : MonoBehaviour
     public float suihkuTime = 100;
     private float suihkuTimer = 0;
     public Vector3Variable portalLocation;
+    public Vector3Variable exit;
 
     private bool ukkoIn;
     
@@ -30,7 +31,8 @@ public class Suihku : MonoBehaviour
         latestUkko = ukko;
         if(suihkuUkot.Count > suihkuUkkoThreshold)
         {
-            print("bad things happen! Latest ukko will leave I guess");
+            //MovementScriptPlaceholder latestUkkoMovementScript = latestUkko.gameObject.GetComponentInChildren<MovementScriptPlaceholder>();
+
         }
     }
     public void RemoveSuihkuUkko(SaunaUkko ukko)
@@ -107,7 +109,7 @@ public class Suihku : MonoBehaviour
     {
         print(col.gameObject.name);
 
-        suihkuttelijanMovementScript = col.gameObject.GetComponentInChildren<MovementScriptPlaceholder>();
+        suihkuttelijanMovementScript = col.gameObject.GetComponentInChildren<MovementScript>();
         if(suihkuttelijanMovementScript != null)
         {
             suihkuIsOccupied.Raise();
