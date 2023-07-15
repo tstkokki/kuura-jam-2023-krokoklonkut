@@ -444,8 +444,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -50, y: 50}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -120, y: 120}
+  m_SizeDelta: {x: 240, y: 240}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &192979033
 MonoBehaviour:
@@ -779,6 +779,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LoylyRes: 20
   Hp: 100
+  IsKlonkku: 0
+  State: {fileID: 11400000, guid: 51c3be03d9b49dd4b8e3986a8b47d6d7, type: 2}
 --- !u!65 &1045815736
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5908,26 +5910,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Target: {fileID: 11400000, guid: dd3085d207901f9499ad2195f433626a, type: 2}
   Offset: {x: 0, y: 0, z: -5}
---- !u!1 &1406323523 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3352758504821410510, guid: b6bd194854e227b41803ea065d6af0ee,
-    type: 3}
-  m_PrefabInstance: {fileID: 3195229415151080428}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1406323534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1406323523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b44b54046add3b6439d63e2766147936, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cooldown: {fileID: 11400000, guid: e2481458eb41d314d8324be373ab8813, type: 2}
-  Duration: {fileID: 11400000, guid: 4300a828e4095ec4e91fa64323a52d45, type: 2}
 --- !u!1 &1855924463
 GameObject:
   m_ObjectHideFlags: 0
@@ -6143,12 +6125,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -6269,11 +6251,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3352758504821410510, guid: b6bd194854e227b41803ea065d6af0ee,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1406323534}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6bd194854e227b41803ea065d6af0ee, type: 3}
 --- !u!1001 &3286404639367224658
 PrefabInstance:
