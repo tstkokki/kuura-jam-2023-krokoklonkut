@@ -20,7 +20,6 @@ public class CameraControl : MonoBehaviour
 
             currentCameraIndex = (currentCameraIndex + suunta + cameras.Count) % cameras.Count;
             transform.position = cameras[currentCameraIndex].Position;
-            Debug.Log(suunta);
         }
     }
 
