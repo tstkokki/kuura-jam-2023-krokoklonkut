@@ -5,7 +5,7 @@ using UnityEngine;
 public class PortalControl : MonoBehaviour
 {
     [SerializeField]
-    List<GameEvent> portaalit = new List<GameEvent>();
+    List<GameEvent> portaalit = new();
     
     /// <summary>
     /// portaalit 1,2 ja 3
@@ -13,7 +13,6 @@ public class PortalControl : MonoBehaviour
     /// <param name="portaali"></param>
     public void Aseta(int portaali)
     {
-        Debug.Log($"Aseta {portaali}");
         portaalit[portaali >= 0 && portaali < portaalit.Count ? portaali : 0].Raise();
     }
 }

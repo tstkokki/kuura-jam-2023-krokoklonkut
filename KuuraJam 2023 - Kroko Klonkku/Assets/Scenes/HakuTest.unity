@@ -5803,6 +5803,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Target: {fileID: 11400000, guid: dd3085d207901f9499ad2195f433626a, type: 2}
   Offset: {x: 0, y: 0, z: -5}
+--- !u!1 &1568962071 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3352758504821410510, guid: b6bd194854e227b41803ea065d6af0ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 3195229415151080428}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1568962081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568962071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dca9ca5acfe95c4987bbce1cf6c5e85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nostaLampoa: {fileID: 11400000, guid: 5ec9c5114f7579c409c4463d6da60236, type: 2}
+  laskeLampoa: {fileID: 11400000, guid: b00fca341952272418bc80ec76bac31a, type: 2}
 --- !u!1 &1855924463
 GameObject:
   m_ObjectHideFlags: 0
@@ -5978,11 +5998,46 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1679679927755888201, guid: b6bd194854e227b41803ea065d6af0ee,
+        type: 3}
+      propertyPath: currentCameraIndex
+      value: 
+      objectReference: {fileID: 11400000, guid: 7e85cf2e8e2f501488b0041ffae240aa,
+        type: 2}
     - target: {fileID: 3352758504821410510, guid: b6bd194854e227b41803ea065d6af0ee,
         type: 3}
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 8107828180532705538, guid: b6bd194854e227b41803ea065d6af0ee,
+        type: 3}
+      propertyPath: CurrentRoom
+      value: 
+      objectReference: {fileID: 11400000, guid: 7e85cf2e8e2f501488b0041ffae240aa,
+        type: 2}
+    - target: {fileID: 8107828180532705538, guid: b6bd194854e227b41803ea065d6af0ee,
+        type: 3}
+      propertyPath: Saunat.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107828180532705538, guid: b6bd194854e227b41803ea065d6af0ee,
+        type: 3}
+      propertyPath: Saunat.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: dd3bac5afac6db144858d51333c7cb6a,
+        type: 2}
+    - target: {fileID: 8107828180532705538, guid: b6bd194854e227b41803ea065d6af0ee,
+        type: 3}
+      propertyPath: Saunat.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3cc3dc1edc73a5e4c80d7e5fa496c22b,
+        type: 2}
+    - target: {fileID: 8107828180532705538, guid: b6bd194854e227b41803ea065d6af0ee,
+        type: 3}
+      propertyPath: Saunat.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: c3bd21d071ceaaa4facb008f5e90493f,
+        type: 2}
     - target: {fileID: 8111676570959696652, guid: b6bd194854e227b41803ea065d6af0ee,
         type: 3}
       propertyPath: m_RootOrder
@@ -6041,7 +6096,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3352758504821410510, guid: b6bd194854e227b41803ea065d6af0ee,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1568962081}
   m_SourcePrefab: {fileID: 100100000, guid: b6bd194854e227b41803ea065d6af0ee, type: 3}
 --- !u!1001 &3286404639367224658
 PrefabInstance:
