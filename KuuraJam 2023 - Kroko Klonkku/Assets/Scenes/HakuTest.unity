@@ -780,6 +780,7 @@ MonoBehaviour:
   LoylyRes: 20
   Hp: 100
   IsKlonkku: 0
+  State: {fileID: 11400000, guid: 51c3be03d9b49dd4b8e3986a8b47d6d7, type: 2}
 --- !u!65 &1045815736
 BoxCollider:
   m_ObjectHideFlags: 0
