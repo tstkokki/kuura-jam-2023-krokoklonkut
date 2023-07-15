@@ -1,9 +1,11 @@
 fileFormatVersion: 2
-guid: 36edaa8080d454f4dba254977dda67b0
+guid: baea1ea7518513f4aa30e5678166bf66
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - goal: {instanceID: 0}
+  - suihku: {fileID: 11400000, guid: 213ee7ffa3e377f49904bb11dea88c8b, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
