@@ -5,6 +5,12 @@ using UnityEngine.InputSystem;
 
 public class InputHandler : MonoBehaviour
 {
+    CameraControl valvontaKamerat;
+
+    private void Awake()
+    {
+        valvontaKamerat = GetComponent<CameraControl>();
+    }
 
     public void HeitaLoyly(InputAction.CallbackContext context)
     {
@@ -20,7 +26,7 @@ public class InputHandler : MonoBehaviour
     public void ChangeCamera(InputAction.CallbackContext context)
     {
         if (IsPressed(context))
-            Debug.Log($"Muuta kamera {context.ReadValue<float>()}");
+            valvontaKamerat.VaihdaKameraa((int)context.ReadValue<float>());
 
     }
 

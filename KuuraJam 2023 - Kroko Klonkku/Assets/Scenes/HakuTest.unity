@@ -253,8 +253,9 @@ GameObject:
   - component: {fileID: 82728777}
   - component: {fileID: 82728776}
   - component: {fileID: 82728775}
+  - component: {fileID: 82728779}
   m_Layer: 0
-  m_Name: Sauna1 (2)
+  m_Name: Sauna 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -346,6 +347,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &82728779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82728774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 896bbad2733179647bbfb5914bf01b97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 11400000, guid: adf1deff3870ed44aa274e54de4dede9, type: 2}
+  Offset: {x: 0, y: 0, z: -10}
 --- !u!1 &424079211
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,6 +373,7 @@ GameObject:
   - component: {fileID: 424079214}
   - component: {fileID: 424079213}
   - component: {fileID: 424079212}
+  - component: {fileID: 424079216}
   m_Layer: 0
   m_Name: Suihku
   m_TagString: Untagged
@@ -451,6 +467,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &424079216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424079211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 896bbad2733179647bbfb5914bf01b97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 11400000, guid: ba555294bde728b40a53927e9e5aa143, type: 2}
+  Offset: {x: 0, y: 0, z: -10}
 --- !u!1 &749529413
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,8 +650,9 @@ GameObject:
   - component: {fileID: 1144758227}
   - component: {fileID: 1144758226}
   - component: {fileID: 1144758225}
+  - component: {fileID: 1144758229}
   m_Layer: 0
-  m_Name: Sauna1
+  m_Name: Sauna 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -713,6 +744,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1144758229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144758224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 896bbad2733179647bbfb5914bf01b97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 11400000, guid: c907b5483fe31ea4db4b8e80faf88f76, type: 2}
+  Offset: {x: 0, y: 0, z: -10}
 --- !u!1 &1906184280
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,6 +772,7 @@ GameObject:
   - component: {fileID: 1906184284}
   - component: {fileID: 1906184286}
   - component: {fileID: 1906184285}
+  - component: {fileID: 1906184287}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1007,6 +1053,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75b1838eccf587b4bbc53f34cf2bbeb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1906184287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906184280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49cbc6562ea4e9e42acc5970890b7a49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2034682280
 GameObject:
   m_ObjectHideFlags: 0
@@ -1019,8 +1077,9 @@ GameObject:
   - component: {fileID: 2034682283}
   - component: {fileID: 2034682282}
   - component: {fileID: 2034682281}
+  - component: {fileID: 2034682285}
   m_Layer: 0
-  m_Name: Sauna1 (1)
+  m_Name: Sauna 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1112,3 +1171,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2034682285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034682280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 896bbad2733179647bbfb5914bf01b97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 11400000, guid: fe2badf197f24024dae9c7ad8eaaecc6, type: 2}
+  Offset: {x: 0, y: 0, z: -10}
