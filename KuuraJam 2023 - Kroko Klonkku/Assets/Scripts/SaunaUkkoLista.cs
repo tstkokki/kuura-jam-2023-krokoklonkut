@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "New SaunaLista", menuName = "Custom/Sauna Lista")]
 public class SaunaUkkoLista : ScriptableObject
 {
     List<SaunaUkko> lista = new();
@@ -27,4 +28,5 @@ public class SaunaUkkoLista : ScriptableObject
     {
         get { return lista.Count; }
     }
+
 }

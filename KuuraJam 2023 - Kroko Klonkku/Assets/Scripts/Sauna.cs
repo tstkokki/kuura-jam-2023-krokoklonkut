@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Sauna : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public SaunaUkkoLista Saunojat;
+    public int LoylyVoima = 30;
+    public void LoylyaKiukaaseen()
     {
-        
+        foreach (var ukko in Saunojat.GetList())
+        {
+            ukko.OttaaLoylya(LoylyVoima);
+        }
     }
-
 }
