@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SaunaUkkoLista : ScriptableObject
 {
-    List<SaunaUkko> lista = new List<SaunaUkko>();
+    List<SaunaUkko> lista = new();
 
     public void AddUkko(SaunaUkko ukko)
     {
@@ -16,5 +16,10 @@ public class SaunaUkkoLista : ScriptableObject
     {
         if (lista.Contains(ukko))
             lista.Remove(ukko);
+    }
+
+    public int Count
+    {
+        get { return lista.Count; }
     }
 }
