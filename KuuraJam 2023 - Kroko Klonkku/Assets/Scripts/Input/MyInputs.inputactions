@@ -24,7 +24,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Camera1",
+                    "name": "Portaali1",
                     "type": "Button",
                     "id": "e1c3d317-3a86-4ea0-9842-313623cbf315",
                     "expectedControlType": "Button",
@@ -33,7 +33,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Camera2",
+                    "name": "Portaali2",
                     "type": "Button",
                     "id": "5d40c9a2-3823-4aa4-a839-79424527b055",
                     "expectedControlType": "Button",
@@ -42,7 +42,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Camera3",
+                    "name": "Portaali3",
                     "type": "Button",
                     "id": "93636002-b8ab-45dc-8e6f-34596102932a",
                     "expectedControlType": "Button",
@@ -209,7 +209,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Camera1",
+                    "action": "Portaali1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -220,7 +220,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Camera1",
+                    "action": "Portaali1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -231,7 +231,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Camera2",
+                    "action": "Portaali2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -242,7 +242,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Camera2",
+                    "action": "Portaali2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -253,7 +253,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Camera3",
+                    "action": "Portaali3",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -264,7 +264,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Camera3",
+                    "action": "Portaali3",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
