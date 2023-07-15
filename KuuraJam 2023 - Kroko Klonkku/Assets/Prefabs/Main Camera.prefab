@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1679679927755888201}
   - component: {fileID: 7776410205212647169}
   - component: {fileID: 8107828180532705538}
+  - component: {fileID: 3359685416581872661}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -314,6 +315,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fe2badf197f24024dae9c7ad8eaaecc6, type: 2}
   - {fileID: 11400000, guid: adf1deff3870ed44aa274e54de4dede9, type: 2}
   - {fileID: 11400000, guid: ba555294bde728b40a53927e9e5aa143, type: 2}
+  currentCameraIndex: {fileID: 11400000, guid: 7e85cf2e8e2f501488b0041ffae240aa, type: 2}
 --- !u!114 &7776410205212647169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,3 +344,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47b08d86e5675494a8bff306cce2077a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Saunat:
+  - {fileID: 11400000, guid: dd3bac5afac6db144858d51333c7cb6a, type: 2}
+  - {fileID: 11400000, guid: 3cc3dc1edc73a5e4c80d7e5fa496c22b, type: 2}
+  - {fileID: 11400000, guid: c3bd21d071ceaaa4facb008f5e90493f, type: 2}
+  CurrentRoom: {fileID: 11400000, guid: 7e85cf2e8e2f501488b0041ffae240aa, type: 2}
+--- !u!114 &3359685416581872661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3352758504821410510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dca9ca5acfe95c4987bbce1cf6c5e85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nostaLampoa: {fileID: 11400000, guid: 5ec9c5114f7579c409c4463d6da60236, type: 2}
+  laskeLampoa: {fileID: 11400000, guid: b00fca341952272418bc80ec76bac31a, type: 2}

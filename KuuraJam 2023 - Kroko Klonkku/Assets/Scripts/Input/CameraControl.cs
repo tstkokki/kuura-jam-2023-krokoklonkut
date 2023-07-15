@@ -5,12 +5,15 @@ public class CameraControl : MonoBehaviour
 {
 
     [SerializeField] List<Vector3Variable> cameras;
-    int currentCameraIndex = 0;
+
+    [SerializeField]
+    IntVariable currentCameraIndex;
     // Start is called before the first frame update
     void Start()
     {
+        currentCameraIndex.Value = 0;
         if (CamerasHaveBeenSet())
-            transform.position = cameras[0].Position;
+            transform.position = cameras[currentCameraIndex.Value].Position;
     }
 
     public void VaihdaKameraa(int suunta)
@@ -18,8 +21,8 @@ public class CameraControl : MonoBehaviour
         if (CamerasHaveBeenSet())
         {
 
-            currentCameraIndex = (currentCameraIndex + suunta + cameras.Count) % cameras.Count;
-            transform.position = cameras[currentCameraIndex].Position;
+            currentCameraIndex.Value = (currentCameraIndex.Value + suunta + cameras.Count) % cameras.Count;
+            transform.position = cameras[currentCameraIndex.Value].Position;
         }
     }
 
