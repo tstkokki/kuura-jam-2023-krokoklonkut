@@ -8,12 +8,17 @@ public class InputHandler : MonoBehaviour
     CameraControl valvontaKamerat;
     LoylynHeitto loyly;
     PortalControl portal;
+    SuihkuControl suihku;
+
+    InputCooldown loylyCooldown;
 
     private void Awake()
     {
         valvontaKamerat = GetComponent<CameraControl>();
         loyly = GetComponent<LoylynHeitto>();
         portal = GetComponent<PortalControl>();
+        suihku = GetComponent<SuihkuControl>();
+        loylyCooldown = GetComponent<InputCooldown>();
 
 #if UNITY_EDITOR
         Debug.unityLogger.logEnabled = true;
@@ -25,8 +30,11 @@ public class InputHandler : MonoBehaviour
 
     public void HeitaLoyly(InputAction.CallbackContext context)
     {
-        if (IsPressed(context))
+        if (IsPressed(context) && loylyCooldown.IsReady())
+        {
             loyly.Heita();
+            loylyCooldown.SetCooldown();
+        }
     }
 
     public void ChangeCamera(InputAction.CallbackContext context)
@@ -40,7 +48,7 @@ public class InputHandler : MonoBehaviour
     public void MuutaSuihkunLampoa(InputAction.CallbackContext context)
     {
         if (IsPressed(context))
-            Debug.Log($"Muuta suihkua {context.ReadValue<float>()}");
+            suihku.Adjust((int)context.ReadValue<float>());
 
     }
 

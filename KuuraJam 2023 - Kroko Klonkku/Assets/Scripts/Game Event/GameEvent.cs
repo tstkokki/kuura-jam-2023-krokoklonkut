@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Game Event", menuName = "Custom/Game Event")]
 public class GameEvent : ScriptableObject
 {
-    List<GameEventListener> listeners = new List<GameEventListener>();
+    List<GameEventListener> listeners = new();
     public void Clear()
     {
         listeners.Clear();
@@ -15,7 +15,8 @@ public class GameEvent : ScriptableObject
     {
         for (int i = listeners.Count - 1; i >= 0; i--)
         {
-            listeners[i]?.Invoke();
+            if (listeners[i] != null)
+                listeners[i].Invoke();
         }
     }
 
