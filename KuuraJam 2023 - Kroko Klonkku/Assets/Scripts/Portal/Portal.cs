@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Portal : MonoBehaviour
+public class Portal : MonoBehaviour, ITarget
 {
 
     [SerializeField]
@@ -19,5 +19,10 @@ public class Portal : MonoBehaviour
     {
         Debug.Log($"Siirry {portaali}");
         transform.position = portaalit[portaali >= 0 && portaali < portaalit.Count ? portaali : 0].Position;
+    }
+
+    public void OnEnter(SaunaUkko ukko)
+    {
+        Debug.Log("Ukko saapui");
     }
 }

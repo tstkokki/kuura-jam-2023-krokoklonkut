@@ -407,7 +407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 11400000, guid: 1a7a998d08c9a674885dc71175f896e6, type: 2}
-  Offset: {x: 0, y: 0, z: -6}
+  Offset: {x: 0, y: 0, z: -5}
 --- !u!1 &274634285
 GameObject:
   m_ObjectHideFlags: 0
@@ -10830,7 +10830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 11400000, guid: dd3085d207901f9499ad2195f433626a, type: 2}
-  Offset: {x: 0, y: 0, z: -6}
+  Offset: {x: 0, y: 0, z: -5}
 --- !u!1 &1850512827
 GameObject:
   m_ObjectHideFlags: 0
@@ -15714,7 +15714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 11400000, guid: 4b363481f5465e5488ff7b0df1a85013, type: 2}
-  Offset: {x: 0, y: 0, z: -6}
+  Offset: {x: 0, y: 0, z: -5}
 --- !u!1 &1858103727
 GameObject:
   m_ObjectHideFlags: 0
