@@ -8,11 +8,8 @@ public class Portal : MonoBehaviour, ITarget
     [SerializeField]
     List<Vector3Variable> portaalit = new List<Vector3Variable>();
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    Vector3Variable Suihku;
 
 
     public void Siirry(int portaali)
@@ -24,5 +21,9 @@ public class Portal : MonoBehaviour, ITarget
     public void OnEnter(SaunaUkko ukko)
     {
         Debug.Log("Ukko saapui");
+        if(Suihku != null)
+        {
+            ukko.transform.position = Suihku.Position;
+        }
     }
 }

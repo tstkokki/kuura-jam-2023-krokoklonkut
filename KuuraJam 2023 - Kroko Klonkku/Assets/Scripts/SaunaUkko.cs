@@ -4,5 +4,9 @@ using UnityEngine;
 
 public class SaunaUkko : MonoBehaviour
 {
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        var col = other.GetComponent<ITarget>();
+        col?.OnEnter(this);
+    }
 }

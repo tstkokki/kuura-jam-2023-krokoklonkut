@@ -14,6 +14,13 @@ public class InputHandler : MonoBehaviour
         valvontaKamerat = GetComponent<CameraControl>();
         loyly = GetComponent<LoylynHeitto>();
         portal = GetComponent<PortalControl>();
+
+#if UNITY_EDITOR
+        Debug.unityLogger.logEnabled = true;
+#else
+        Debug.unityLogger.logEnabled = false;
+
+#endif
     }
 
     public void HeitaLoyly(InputAction.CallbackContext context)
