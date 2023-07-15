@@ -9,9 +9,9 @@
 
 * Saunasta suihkuun
 
-* Apply löyly
+* Apply löyly - HK
 
-* Saunaukko take löyly dmg
+* Saunaukko take löyly dmg - HK
 
 * Gain sauna points
 
