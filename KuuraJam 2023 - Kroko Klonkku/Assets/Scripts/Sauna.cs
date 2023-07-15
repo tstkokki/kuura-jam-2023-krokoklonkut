@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Sauna : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
 
+    public void LoylyaKiukaaseen()
+    {
+        Debug.Log("Löylyä!");
+    }
 }

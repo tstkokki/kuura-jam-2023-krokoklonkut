@@ -788,6 +788,8 @@ GameObject:
   - component: {fileID: 1144758226}
   - component: {fileID: 1144758225}
   - component: {fileID: 1144758229}
+  - component: {fileID: 1144758231}
+  - component: {fileID: 1144758230}
   m_Layer: 0
   m_Name: Sauna 1
   m_TagString: Untagged
@@ -896,6 +898,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Target: {fileID: 11400000, guid: c907b5483fe31ea4db4b8e80faf88f76, type: 2}
   Offset: {x: 0, y: 0, z: -10}
+--- !u!114 &1144758230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144758224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e513b8ed49114224bb23b6ba0d23d97b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: dd3bac5afac6db144858d51333c7cb6a, type: 2}
+  _event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1144758231}
+        m_TargetAssemblyTypeName: Sauna, Assembly-CSharp
+        m_MethodName: LoylyaKiukaaseen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1144758231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144758224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eb2384072ecc9c499128ffb5c28823a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1351044781
 GameObject:
   m_ObjectHideFlags: 0
