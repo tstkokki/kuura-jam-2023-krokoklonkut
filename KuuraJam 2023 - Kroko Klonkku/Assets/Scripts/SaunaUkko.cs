@@ -7,6 +7,8 @@ public class SaunaUkko : MonoBehaviour
     [SerializeField] int LoylyRes = 20;
     [SerializeField] int Hp = 100;
 
+    public bool IsKlonkku;
+
     public void OttaaLoylya(int amount)
     {
         Hp -= Mathf.Max(amount - LoylyRes, 10);

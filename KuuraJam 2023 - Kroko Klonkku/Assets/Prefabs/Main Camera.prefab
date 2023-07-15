@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 7776410205212647169}
   - component: {fileID: 8107828180532705538}
   - component: {fileID: 3359685416581872661}
+  - component: {fileID: 4987138582459479445}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -363,3 +364,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nostaLampoa: {fileID: 11400000, guid: 5ec9c5114f7579c409c4463d6da60236, type: 2}
   laskeLampoa: {fileID: 11400000, guid: b00fca341952272418bc80ec76bac31a, type: 2}
+--- !u!114 &4987138582459479445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3352758504821410510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b44b54046add3b6439d63e2766147936, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cooldown: {fileID: 11400000, guid: e2481458eb41d314d8324be373ab8813, type: 2}
+  Duration: {fileID: 11400000, guid: 4300a828e4095ec4e91fa64323a52d45, type: 2}
