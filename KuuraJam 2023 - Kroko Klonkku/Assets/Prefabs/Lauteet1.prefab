@@ -255,6 +255,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a198fc60871650f4bbf1f887e71d510f, type: 2}
   - {fileID: 11400000, guid: 6aee4469b06ba394c9ce92bb0d144cf9, type: 2}
   saunaUkkoLista: {fileID: 0}
+  klonkkuThreshold: 5
+  klonkkufikaatio: {fileID: 11400000, guid: 4d2bbf576bbb6684e8aa32665b2db619, type: 2}
+  movingState: {fileID: 11400000, guid: 4d2bbf576bbb6684e8aa32665b2db619, type: 2}
   testiUkot: []
 --- !u!1 &3500893281107736806
 GameObject:
@@ -510,7 +513,7 @@ Transform:
   - {fileID: 2764545490877917825}
   - {fileID: 4014274596915625486}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7636332166335941122
 GameObject:
