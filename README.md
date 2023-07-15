@@ -1,8 +1,9 @@
 # kuura-jam-2023-krokoklonkut
 
 # To-Do list:
-~~* Portal~~
-~~* Gollum model~~
+* ~~Portal~~
+
+* ~~Gollum model~~
 
 # Kuura Sauna & the Klonkku Comes from Below
 
