@@ -18,6 +18,11 @@ public class SaunaUkkoLista : ScriptableObject
             lista.Remove(ukko);
     }
 
+    public List<SaunaUkko> GetList()
+    {
+        return lista;
+    }
+
     public int Count
     {
         get { return lista.Count; }

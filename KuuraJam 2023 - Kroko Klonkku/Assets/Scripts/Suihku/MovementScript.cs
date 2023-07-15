@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovementScriptPlaceholder : MonoBehaviour
+public class MovementScript : MonoBehaviour
 {
     public float moveSpeed;
     private bool enableMovement = true;
@@ -20,7 +20,7 @@ public class MovementScriptPlaceholder : MonoBehaviour
     {
         if (enableMovement)
         {
-            this.gameObject.transform.Translate(moveSpeed * Time.deltaTime * goal.Position);
+            this.gameObject.transform.Translate(moveSpeed * Time.deltaTime * goal.Position.normalized);
         }
     }
 

@@ -5,6 +5,18 @@
 
 * ~~Gollum model~~
 
+* Suihkusta saunaan
+
+* Saunasta suihkuun
+
+* Apply löyly
+
+* Saunaukko take löyly dmg
+
+* Gain sauna points
+
+* take Klonkku penalties
+
 # Kuura Sauna & the Klonkku Comes from Below
 
 
