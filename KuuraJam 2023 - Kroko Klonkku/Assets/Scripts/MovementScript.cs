@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class MovementScript : MonoBehaviour
 {
@@ -12,15 +13,14 @@ public class MovementScript : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        // Placeholder test thing
-        goal = suihku;
     }
     // Update is called once per frame
     void Update()
     {
-        if (enableMovement)
+        if (enableMovement && goal != null)
         {
-            this.gameObject.transform.Translate(moveSpeed * Time.deltaTime * goal.Position.normalized);
+            float speed = moveSpeed * Time.deltaTime; // calculate distance to move
+            transform.position = Vector3.MoveTowards(transform.position, goal.Position, speed);
         }
     }
 
