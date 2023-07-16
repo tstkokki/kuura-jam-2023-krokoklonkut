@@ -104,6 +104,9 @@ public class Suihku : MonoBehaviour
             GetSuihkuttelijanMovementScript().SetGoal(portalLocation);
             ukkoIn = false;
             palvelu.PoistuSuihkusta(GetSuihkuttelijanMovementScript().GetComponent<SaunaUkko>());
+            SaunaUkko sukko = GetSuihkuttelijanMovementScript().GetComponent<SaunaUkko>();
+            SpriteRenderer sr = sukko.GetComponentInChildren<SpriteRenderer>();
+            sr.flipX = false;
         }
     }
 

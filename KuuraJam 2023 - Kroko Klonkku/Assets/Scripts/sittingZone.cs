@@ -9,18 +9,27 @@ public class sittingZone : MonoBehaviour
     public SaunaUkkoState klonkkuState;
     private void OnTriggerEnter(Collider col)
     {
-        var saunaUkko = col.GetComponentInChildren<SaunaUkko>();
-        if(saunaUkko != null && saunaUkko.State != klonkkuState)
-        {
-            saunaUkko.State = sittingState;
-        }
+
     }
-    private void OnTriggerExit(Collider col)
+
+    private void OnTriggerStay(Collider col)
     {
         var saunaUkko = col.GetComponentInChildren<SaunaUkko>();
-        if (saunaUkko != null && saunaUkko.State != klonkkuState)
-        { 
-            saunaUkko.State = movingState;
+        if (saunaUkko != null)
+        {
+            SpriteRenderer sr = saunaUkko.GetComponentInChildren<SpriteRenderer>();
+            if (!saunaUkko.IsKlonkku)
+            {
+                sr.flipX = true;
+            }
         }
     }
+    //private void OnTriggerExit(Collider col)
+    //{
+    //    var saunaUkko = col.GetComponentInChildren<SaunaUkko>();
+    //    if (saunaUkko != null)
+    //    { 
+            
+    //    }
+    //}
 }
