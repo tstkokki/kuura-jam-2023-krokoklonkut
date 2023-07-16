@@ -8,7 +8,7 @@ public class Laudegrid : MonoBehaviour
     public List<Vector3Variable> laudeGrid;
     public SaunaUkkoLista saunaUkkoLista;
     public int klonkkuThreshold;
-    public SaunaUkkoState klonkkufikaatio;
+    public SaunaUkkoState klonkkuState;
     public SaunaUkkoState movingState;
     public List<SaunaUkko> testiUkot;
     public void ArrangeUkotToSeats()
@@ -26,13 +26,13 @@ public class Laudegrid : MonoBehaviour
             {
                 saunaUkkoMovement.SetGoal(laudeGrid[laudeGrid.Count-1]);
             }
-            if (ukko.State == klonkkufikaatio)
+            if (ukko.State == klonkkuState)
             {
                 ukko.State = movingState;
             }
             if(i >= klonkkuThreshold)
             {
-                ukko.State = klonkkufikaatio;
+                ukko.State = klonkkuState;
             }
 
         }
