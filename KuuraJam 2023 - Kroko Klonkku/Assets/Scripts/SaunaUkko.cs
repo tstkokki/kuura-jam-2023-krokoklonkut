@@ -9,10 +9,23 @@ public class SaunaUkko : MonoBehaviour
 
     public bool IsKlonkku;
     public SaunaUkkoState State;
+
+    [SerializeField]
+    SaunaPalvelu saunaPalvelu;
+
     public void OttaaLoylya(int amount)
     {
         Hp -= Mathf.Max(amount - LoylyRes, 10);
+
+        if(Hp <= 0 )
+        {
+            saunaPalvelu.LaitaIstumaan(this);
+        }
     }
+
+    public bool JaksaaSaunoa => !IsKlonkku 
+        && (saunaPalvelu == null || saunaPalvelu.OnkoIstumassa(this)) 
+        && LoylyRes > 0;
 
 
     public void GoToNext()
