@@ -34,6 +34,7 @@ Transform:
   - {fileID: 2537811331573793457}
   - {fileID: 8598856267690820135}
   - {fileID: 2159436138012180645}
+  - {fileID: 2987563456537639222}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -49,8 +50,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 802a2425e0f21384b855127dabe917a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  suihkuIsFree: {fileID: 11400000, guid: a0aa2c83e731436449064611e0e0b0df, type: 2}
-  suihkuIsOccupied: {fileID: 11400000, guid: dc31d7a25fdb75240b7c080417bdb147, type: 2}
   suihkuUkkoThreshold: 10
   minTemp: 10
   maxTemp: 90
@@ -60,6 +59,9 @@ MonoBehaviour:
   suihkuLocation: {fileID: 11400000, guid: a1af8abad6098024c97840f60980c2ce, type: 2}
   portalLocation: {fileID: 11400000, guid: 1c5f435054f77a1449387b2471fb0d55, type: 2}
   exit: {fileID: 11400000, guid: ddb9eb75acd3bf445acecb427f7141cb, type: 2}
+  suihkuInnerLocation: {fileID: 11400000, guid: 869d851bcc416d8419bc8fcd8dc0d8d3,
+    type: 2}
+  palvelu: {fileID: 0}
 --- !u!65 &8387903839229423461
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -237,6 +239,52 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &6477038458902547711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2987563456537639222}
+  - component: {fileID: 5439805312995223160}
+  m_Layer: 0
+  m_Name: SuihkuInnerLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2987563456537639222
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6477038458902547711}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8425750488971655036}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5439805312995223160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6477038458902547711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 896bbad2733179647bbfb5914bf01b97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 11400000, guid: 869d851bcc416d8419bc8fcd8dc0d8d3, type: 2}
+  Offset: {x: 0, y: 0, z: 0}
 --- !u!1 &8120067679930163677
 GameObject:
   m_ObjectHideFlags: 0

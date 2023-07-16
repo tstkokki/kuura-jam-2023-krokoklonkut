@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class Suihku : MonoBehaviour
 {
-    public GameEvent suihkuIsFree;
-    public GameEvent suihkuIsOccupied;
-
     private MovementScript suihkuttelijanMovementScript;
 
     private SaunaUkkoLista suihkuUkot;
@@ -16,10 +13,11 @@ public class Suihku : MonoBehaviour
     public int temperature = 50;
     public int suihkuAdjustValue = 10;
     public float suihkuTime = 100;
-    private float suihkuTimer = 0;
+    public float suihkuTimer = 0;
     public Vector3Variable suihkuLocation;
     public Vector3Variable portalLocation;
     public Vector3Variable exit;
+    public Vector3Variable suihkuInnerLocation;
 
     private bool ukkoIn;
     
@@ -103,10 +101,8 @@ public class Suihku : MonoBehaviour
             suihkuTimer -= suihkuValue * Time.deltaTime;
         }
         else if(suihkuTimer <= 0 && ukkoIn){
-            GetSuihkuttelijanMovementScript().EnableMovement();
             GetSuihkuttelijanMovementScript().SetGoal(portalLocation);
             ukkoIn = false;
-            suihkuIsFree.Raise();
             palvelu.PoistuSuihkusta(GetSuihkuttelijanMovementScript().GetComponent<SaunaUkko>());
         }
     }
@@ -120,16 +116,14 @@ public class Suihku : MonoBehaviour
         return suihkuttelijanMovementScript;
     }
 
-    private void OnTriggerEnter(Collider col)
+    private void OnTriggerStay(Collider col)
     {
-        print(col.gameObject.name);
+        //print(col.gameObject.name);
 
-        SetSuihkuttelijanMovementScript(col.gameObject.GetComponentInChildren<MovementScript>());
-        if(GetSuihkuttelijanMovementScript() != null)
+        if(GetSuihkuttelijanMovementScript() != col.GetComponentInChildren<MovementScript>() && !ukkoIn)
         {
-            MovementScript suihkuMs = GetSuihkuttelijanMovementScript();
-            suihkuIsOccupied.Raise();
-            suihkuMs.DisableMovement();
+            SetSuihkuttelijanMovementScript(col.gameObject.GetComponentInChildren<MovementScript>());
+            GetSuihkuttelijanMovementScript().SetGoal(suihkuInnerLocation);
             ukkoIn = true;
             suihkuTimer = suihkuTime;
         }
