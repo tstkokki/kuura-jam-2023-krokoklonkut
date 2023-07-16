@@ -37,10 +37,10 @@ public class Laudegrid : MonoBehaviour
             if (i >= klonkkuThreshold)
             {
                 ukko.State = klonkkuState;
-                ukko.IsKlonkku = true;
+                ukko.LaitaKlonkuksi(true);
             }
             else
-                ukko.IsKlonkku =false;
+                ukko.LaitaKlonkuksi(false);
 
         }
     }

@@ -70,7 +70,7 @@ public class Sauna : MonoBehaviour
             {
                 foreach (var ukko in Saunojat.GetList())
                 {
-                    LoylynVaikutukset(ukko, 10, 5);
+                    LoylynVaikutukset(ukko, 10, 1);
                 }
                 HoidaHeikot();
             });

@@ -14,12 +14,24 @@ public class SaunaUkko : MonoBehaviour
     SaunaPalvelu saunaPalvelu;
 
     MovementScript myMovement;
+    GameObject KlonkkuModel;
 
+    SpriteRenderer sprite;
 
     private void Start()
     {
         if (myMovement == null)
             myMovement = GetComponent<MovementScript>();
+
+        sprite = GetComponentInChildren<SpriteRenderer>();
+
+        var klon = GetComponentInChildren<ChangeToKlonkku>();
+        if (klon != null)
+        {
+
+            KlonkkuModel = klon.gameObject;
+            KlonkkuModel.SetActive(false);
+        }
     }
 
     public void OttaaLoylya(int amount)
@@ -30,6 +42,15 @@ public class SaunaUkko : MonoBehaviour
     public bool EiJaksaSaunoa()
     {
         return Hp <= 0;
+    }
+
+    public void LaitaKlonkuksi(bool toggle)
+    {
+        IsKlonkku = toggle;
+        if(sprite != null)
+            sprite.enabled = !toggle;
+        if (KlonkkuModel != null)
+            KlonkkuModel.SetActive(toggle);
     }
 
     public void LaitaLiikkeelle(Vector3Variable uusiKohde)
