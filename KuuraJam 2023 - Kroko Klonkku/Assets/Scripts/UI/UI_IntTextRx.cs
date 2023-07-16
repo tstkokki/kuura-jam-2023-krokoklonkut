@@ -13,6 +13,8 @@ public class UI_IntTextRx : MonoBehaviour
 
     TextMeshProUGUI UI;
 
+    public int threshold = 0;
+    public string flavor = "Points";
     // Start is called before the first frame update
     void Start()
     {
@@ -35,8 +37,8 @@ public class UI_IntTextRx : MonoBehaviour
 
     private void PaivitaUI()
     {
-        UI.text = observed.Value < 0 
-            ? $"Points: <color=\"red\">{observed.Value}</color>"
-            : $"Points: {observed.Value}";
+        UI.text = observed.Value < threshold 
+            ? $"{flavor}: <color=\"red\">{observed.Value}</color>"
+            : $"{flavor}: {observed.Value}";
     }
 }

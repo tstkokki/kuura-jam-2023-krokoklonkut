@@ -13,6 +13,9 @@ public class UkkoAnimator : MonoBehaviour
     [SerializeField]
     SaunaPalvelu saunaPalvelu;
 
+    [SerializeField]
+    GameEvent pokeEvent;
+
     string walk = "SaunaUkkoWalking";
     string sit = "SaunaUkkoSit";
     string poke = "SaunaUkkoPoked";
@@ -42,6 +45,12 @@ public class UkkoAnimator : MonoBehaviour
                 else animator.Play(idle);
             });
 
+    }
+
+    public void PlayPoke()
+    {
+        pokeEvent.Raise();
+        animator.Play(poke);
     }
 
 }

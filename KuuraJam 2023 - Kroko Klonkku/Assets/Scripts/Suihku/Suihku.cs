@@ -10,7 +10,7 @@ public class Suihku : MonoBehaviour
     public int suihkuUkkoThreshold = 5;
     public int minTemp = 10;
     public int maxTemp = 90;
-    public int temperature = 50;
+    public IntVariable temperature;
     public int suihkuAdjustValue = 10;
     public float suihkuTime = 100;
     public float suihkuTimer = 0;
@@ -65,26 +65,26 @@ public class Suihku : MonoBehaviour
 
     public void suihkuPlus()
     {
-        int newValue = temperature + suihkuAdjustValue;
+        int newValue = temperature.Value + suihkuAdjustValue;
         if(newValue < maxTemp)
         {
-            temperature = newValue;
+            temperature.Value = newValue;
         }
         else
         {
-            temperature = maxTemp;
+            temperature.Value = maxTemp;
         }
     }
     public void suihkuMinus()
     {
-        int newValue = temperature - suihkuAdjustValue;
+        int newValue = temperature.Value - suihkuAdjustValue;
         if (newValue > minTemp)
         {
-            temperature = newValue;
+            temperature.Value = newValue;
         }
         else
         {
-            temperature = minTemp;
+            temperature.Value = minTemp;
         }
     }
 
@@ -97,7 +97,7 @@ public class Suihku : MonoBehaviour
     public void CheckSuihkuTimer() {
         if (suihkuIsOn && suihkuTimer > 0)
         {
-            float suihkuValue = 100 * (temperature / 100f);
+            float suihkuValue = 100 - temperature.Value;
             suihkuTimer -= suihkuValue * Time.deltaTime;
         }
         else if(suihkuTimer <= 0 && ukkoIn){
@@ -133,4 +133,8 @@ public class Suihku : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        temperature.Value = 50;
+    }
 }

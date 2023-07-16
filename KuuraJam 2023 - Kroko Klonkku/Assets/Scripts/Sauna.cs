@@ -49,17 +49,6 @@ public class Sauna : MonoBehaviour
         }
     }
 
-    private void LoylynVaikutukset(SaunaUkko ukko, int loylyVoima, int pisteet)
-    {
-        ukko.OttaaLoylya(loylyVoima);
-        PisteetUkosta(ukko, pisteet);
-        if (ukko.EiJaksaSaunoa())
-        {
-            heikot.Enqueue(ukko);
-        }
-
-    }
-
     IDisposable _update;
     private void Start()
     {
@@ -76,6 +65,17 @@ public class Sauna : MonoBehaviour
             });
     }
 
+    private void LoylynVaikutukset(SaunaUkko ukko, int loylyVoima, int pisteet)
+    {
+        ukko.OttaaLoylya(loylyVoima);
+        PisteetUkosta(ukko, pisteet);
+        if (ukko.EiJaksaSaunoa())
+        {
+            heikot.Enqueue(ukko);
+        }
+
+    }
+
     private void PisteetUkosta(SaunaUkko ukko, int pisteet)
     {
         int amt =
@@ -85,6 +85,12 @@ public class Sauna : MonoBehaviour
         ? pisteet
         : 0;
         pisteytys.AddPoints(amt);
+        if (ukko.IsKlonkku)
+        {
+
+            var list = Saunojat.GetList();
+            list[list.IndexOf(ukko) - 5].PlayPoke();
+        }
     }
 
     private void OnDisable()

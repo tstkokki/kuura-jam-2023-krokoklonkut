@@ -267,6 +267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saunaPalvelu: {fileID: 11400000, guid: 138ac01a4e9abea46adee9dc3a5f9497, type: 2}
+  pokeEvent: {fileID: 11400000, guid: 9b78929da89b03c469cb7db0d8864b73, type: 2}
 --- !u!1001 &7985090133556977898
 PrefabInstance:
   m_ObjectHideFlags: 0

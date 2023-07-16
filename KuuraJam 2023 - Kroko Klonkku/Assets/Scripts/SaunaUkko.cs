@@ -18,12 +18,15 @@ public class SaunaUkko : MonoBehaviour
 
     SpriteRenderer sprite;
 
+    UkkoAnimator animator;
+
     private void Start()
     {
         if (myMovement == null)
             myMovement = GetComponent<MovementScript>();
 
         sprite = GetComponentInChildren<SpriteRenderer>();
+        animator = GetComponent<UkkoAnimator>();
 
         var klon = GetComponentInChildren<ChangeToKlonkku>();
         if (klon != null)
@@ -67,6 +70,10 @@ public class SaunaUkko : MonoBehaviour
         myMovement.moveSpeed = speed;
     }
 
+    public void PlayPoke()
+    {
+        animator.PlayPoke();
+    }
 
     public void ResetHp()
     {
