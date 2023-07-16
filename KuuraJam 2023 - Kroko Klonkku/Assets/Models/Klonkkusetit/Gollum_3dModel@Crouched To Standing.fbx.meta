@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6f6ab6fd436d80d4aadc8834866a6449
+guid: c6ab96795f11f12478b33b85f28c12bd
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -15,7 +15,7 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
-    motionNodeName: 
+    motionNodeName: Box001
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
