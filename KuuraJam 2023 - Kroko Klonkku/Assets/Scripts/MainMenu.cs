@@ -18,6 +18,8 @@ public class MainMenu : MonoBehaviour
     {
         creditsScreen.SetActive(false);
         settingsScreen.SetActive(false);
+        audioSource = GetComponent<AudioSource>();
+        InvokeRepeating("playSaunaSound", 0f, 7f);
     }
 
     public void onPlayButtonClick()
