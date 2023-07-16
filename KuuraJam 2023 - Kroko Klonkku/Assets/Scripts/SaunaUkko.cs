@@ -23,6 +23,11 @@ public class SaunaUkko : MonoBehaviour
         }
     }
 
+    public void ResetHp()
+    {
+        Hp = 100;
+    }
+
     public bool JaksaaSaunoa => !IsKlonkku 
         && (saunaPalvelu == null || saunaPalvelu.OnkoIstumassa(this)) 
         && LoylyRes > 0;
