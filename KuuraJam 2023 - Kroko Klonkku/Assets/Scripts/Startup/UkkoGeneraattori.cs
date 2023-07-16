@@ -14,6 +14,7 @@ public class UkkoGeneraattori : MonoBehaviour
 
     int[] Hps = new int[3] { 100, 80, 120 };
     int[] Res = new int[3] { 20, 5, 40 };
+    float[] Speeds = new float[3] { 1, 1.5f, 1.2f };
 
     private void Awake()
     {
@@ -23,7 +24,11 @@ public class UkkoGeneraattori : MonoBehaviour
             var obj = Instantiate(prefab);
             obj.transform.position = transform.position;
             var ukko = obj.GetComponent<SaunaUkko>();
-            ukko.Init(Hps[Random.Range(0, Hps.Length)], Res[Random.Range(0, Res.Length)]);
+            ukko.Init(
+                Hps[Random.Range(0, Hps.Length)],
+                Res[Random.Range(0, Res.Length)],
+                Speeds[Random.Range(0, Speeds.Length)]
+                );
             lista.AddUkko(ukko);
         }
 
