@@ -12,7 +12,7 @@ public class UkkoGeneraattori : MonoBehaviour
 
     public int UkkoPerSauna = 5;
 
-    int[] Hps = new int[3] { 100, 80, 120 };
+    int[] Hps = new int[3] { 80, 50, 120 };
     int[] Res = new int[3] { 20, 5, 40 };
     float[] Speeds = new float[3] { 1, 1.5f, 1.2f };
 
