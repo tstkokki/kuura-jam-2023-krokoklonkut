@@ -78,10 +78,11 @@ public class Sauna : MonoBehaviour
 
     private void PisteetUkosta(SaunaUkko ukko, int pisteet)
     {
-        int amt = ukko.JaksaaSaunoa
-        ? pisteet
-        : ukko.IsKlonkku
+        int amt =
+        ukko.IsKlonkku
         ? klonkkuPenalty
+        : ukko.JaksaaSaunoa
+        ? pisteet
         : 0;
         pisteytys.AddPoints(amt);
     }
