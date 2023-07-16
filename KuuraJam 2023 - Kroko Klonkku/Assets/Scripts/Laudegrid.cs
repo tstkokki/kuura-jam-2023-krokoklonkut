@@ -55,10 +55,8 @@ public class Laudegrid : MonoBehaviour
     {
         saunaUkkoLista.RemoveUkko(ukko);
     }
-
-    private void Awake()
+    private void Start()
     {
-        saunaUkkoLista = ScriptableObject.CreateInstance<SaunaUkkoLista>();
-        AddTestiUkot();
+        ArrangeUkotToSeats();
     }
 }

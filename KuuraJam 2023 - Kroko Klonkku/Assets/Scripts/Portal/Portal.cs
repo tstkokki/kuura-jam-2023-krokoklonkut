@@ -9,9 +9,13 @@ public class Portal : MonoBehaviour, ITarget
     List<Vector3Variable> portaalit = new List<Vector3Variable>();
 
     [SerializeField]
+    Vector3Variable SuihkuPortaali;
+
+    [SerializeField]
     Vector3Variable Suihku;
 
-
+    [SerializeField]
+    SaunaPalvelu palvelu;
 
     public void Siirry(int portaali)
     {
@@ -21,10 +25,10 @@ public class Portal : MonoBehaviour, ITarget
 
     public void OnEnter(SaunaUkko ukko)
     {
-        Debug.Log("Ukko saapui");
-        if(Suihku != null)
+        if(SuihkuPortaali != null && palvelu.OnkoLiikkeella(ukko))
         {
-            ukko.transform.position = Suihku.Position;
+            ukko.transform.position = SuihkuPortaali.Position;
+            ukko.GoToNext(Suihku);
         }
     }
 }

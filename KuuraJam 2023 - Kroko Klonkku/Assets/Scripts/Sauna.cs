@@ -12,19 +12,50 @@ public class Sauna : MonoBehaviour
     [SerializeField]
     SaunaPalvelu saunaPalvelu;
 
+    [SerializeField]
+    Vector3Variable portaali;
+
     public SaunaUkkoLista Saunojat;
     public int LoylyVoima = 30;
 
     public int saunojanPisteet = 10;
     public int klonkkuPenalty = -60;
 
+    Queue<SaunaUkko> heikot = new();
+
     public void LoylyaKiukaaseen()
     {
         foreach (var ukko in Saunojat.GetList())
         {
-            ukko.OttaaLoylya(LoylyVoima);
+            LoylynVaikutukset(ukko, LoylyVoima, saunojanPisteet);
+        }
+        HoidaHeikot();
+    }
+
+    private void HoidaHeikot()
+    {
+        if (heikot.Count > 0)
+        {
+            while (heikot.Count > 0)
+            {
+                var ukko = heikot.Dequeue();
+                ukko.LaitaLiikkeelle(portaali);
+                Saunojat.RemoveUkko(ukko);
+            }
         }
     }
+
+    private void LoylynVaikutukset(SaunaUkko ukko, int loylyVoima, int pisteet)
+    {
+        ukko.OttaaLoylya(loylyVoima);
+        PisteetUkosta(ukko, pisteet);
+        if (ukko.EiJaksaSaunoa())
+        {
+            heikot.Enqueue(ukko);
+        }
+
+    }
+
     IDisposable _update;
     private void Start()
     {
@@ -35,13 +66,19 @@ public class Sauna : MonoBehaviour
             {
                 foreach (var ukko in Saunojat.GetList())
                 {
-                    pisteytys.Pisteet += ukko.JaksaaSaunoa
-                    ? saunojanPisteet
-                    : ukko.IsKlonkku
-                    ? klonkkuPenalty
-                    : 0;
+                    LoylynVaikutukset(ukko, 10, 5);
                 }
+                HoidaHeikot();
             });
+    }
+
+    private void PisteetUkosta(SaunaUkko ukko, int pisteet)
+    {
+        pisteytys.Pisteet += ukko.JaksaaSaunoa
+        ? pisteet
+        : ukko.IsKlonkku
+        ? klonkkuPenalty
+        : 0;
     }
 
     private void OnDisable()
