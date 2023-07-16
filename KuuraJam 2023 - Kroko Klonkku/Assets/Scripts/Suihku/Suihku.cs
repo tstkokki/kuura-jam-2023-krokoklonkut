@@ -7,10 +7,9 @@ public class Suihku : MonoBehaviour
     public GameEvent suihkuIsFree;
     public GameEvent suihkuIsOccupied;
 
-    public MovementScript suihkuttelijanMovementScript;
+    private MovementScript suihkuttelijanMovementScript;
 
-    public SaunaUkkoLista suihkuUkot;
-    public SaunaUkko latestUkko;
+    private SaunaUkkoLista suihkuUkot;
     public int suihkuUkkoThreshold = 5;
     public int minTemp = 10;
     public int maxTemp = 90;
@@ -18,6 +17,7 @@ public class Suihku : MonoBehaviour
     public int suihkuAdjustValue = 10;
     public float suihkuTime = 100;
     private float suihkuTimer = 0;
+    public Vector3Variable suihkuLocation;
     public Vector3Variable portalLocation;
     public Vector3Variable exit;
 
@@ -28,11 +28,14 @@ public class Suihku : MonoBehaviour
     public void AddSuihkuUkko(SaunaUkko ukko)
     {
         suihkuUkot.AddUkko(ukko);
-        latestUkko = ukko;
-        if(suihkuUkot.Count > suihkuUkkoThreshold)
+        MovementScript ukkoMovement = ukko.gameObject.GetComponentInChildren<MovementScript>();
+        if (suihkuUkot.Count > suihkuUkkoThreshold)
         {
-            //MovementScriptPlaceholder latestUkkoMovementScript = latestUkko.gameObject.GetComponentInChildren<MovementScriptPlaceholder>();
-
+            ukkoMovement.SetGoal(exit);
+        }
+        else
+        {
+            ukkoMovement.SetGoal(suihkuLocation);
         }
     }
     public void RemoveSuihkuUkko(SaunaUkko ukko)
@@ -97,23 +100,33 @@ public class Suihku : MonoBehaviour
             suihkuTimer -= suihkuValue * Time.deltaTime;
         }
         else if(suihkuTimer <= 0 && ukkoIn){
-            suihkuttelijanMovementScript.EnableMovement();
-            suihkuttelijanMovementScript.SetGoal(portalLocation);
+            GetSuihkuttelijanMovementScript().EnableMovement();
+            GetSuihkuttelijanMovementScript().SetGoal(portalLocation);
             ukkoIn = false;
             suihkuIsFree.Raise();
             
         }
     }
 
+    public void SetSuihkuttelijanMovementScript(MovementScript movementScript)
+    {
+        suihkuttelijanMovementScript = movementScript;
+    }
+    public MovementScript GetSuihkuttelijanMovementScript()
+    {
+        return suihkuttelijanMovementScript;
+    }
+
     private void OnTriggerEnter(Collider col)
     {
         print(col.gameObject.name);
 
-        suihkuttelijanMovementScript = col.gameObject.GetComponentInChildren<MovementScript>();
-        if(suihkuttelijanMovementScript != null)
+        SetSuihkuttelijanMovementScript(col.gameObject.GetComponentInChildren<MovementScript>());
+        if(GetSuihkuttelijanMovementScript() != null)
         {
+            MovementScript suihkuMs = GetSuihkuttelijanMovementScript();
             suihkuIsOccupied.Raise();
-            suihkuttelijanMovementScript.DisableMovement();
+            suihkuMs.DisableMovement();
             ukkoIn = true;
             suihkuTimer = suihkuTime;
         }

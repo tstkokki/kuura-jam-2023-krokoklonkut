@@ -17,7 +17,7 @@ public class MovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (enableMovement && goal != null)
+        if (enableMovement && goal != null && transform.position != goal.Position)
         {
             float speed = moveSpeed * Time.deltaTime; // calculate distance to move
             transform.position = Vector3.MoveTowards(transform.position, goal.Position, speed);
