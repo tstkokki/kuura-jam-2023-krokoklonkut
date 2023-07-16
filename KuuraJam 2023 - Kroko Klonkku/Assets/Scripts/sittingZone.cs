@@ -18,7 +18,7 @@ public class sittingZone : MonoBehaviour
         if (saunaUkko != null)
         {
             SpriteRenderer sr = saunaUkko.GetComponentInChildren<SpriteRenderer>();
-            if (!saunaUkko.IsKlonkku)
+            if (!saunaUkko.IsKlonkku && sr != null)
             {
                 sr.flipX = true;
             }

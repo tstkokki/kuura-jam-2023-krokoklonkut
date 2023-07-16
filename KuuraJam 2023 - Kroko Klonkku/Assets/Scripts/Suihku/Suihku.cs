@@ -106,7 +106,8 @@ public class Suihku : MonoBehaviour
             palvelu.PoistuSuihkusta(GetSuihkuttelijanMovementScript().GetComponent<SaunaUkko>());
             SaunaUkko sukko = GetSuihkuttelijanMovementScript().GetComponent<SaunaUkko>();
             SpriteRenderer sr = sukko.GetComponentInChildren<SpriteRenderer>();
-            sr.flipX = false;
+            if (sr != null){
+                sr.flipX = false; }
         }
     }
 
