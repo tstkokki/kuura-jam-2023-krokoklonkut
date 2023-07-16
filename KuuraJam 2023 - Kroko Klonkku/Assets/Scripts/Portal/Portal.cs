@@ -12,6 +12,7 @@ public class Portal : MonoBehaviour, ITarget
     Vector3Variable Suihku;
 
 
+
     public void Siirry(int portaali)
     {
         Debug.Log($"Siirry {portaali}");
