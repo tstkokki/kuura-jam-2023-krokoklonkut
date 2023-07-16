@@ -13,29 +13,53 @@ public class SaunaUkko : MonoBehaviour
     [SerializeField]
     SaunaPalvelu saunaPalvelu;
 
+    MovementScript myMovement;
+
+
+    private void Start()
+    {
+        if (myMovement == null)
+            myMovement = GetComponent<MovementScript>();
+    }
+
     public void OttaaLoylya(int amount)
     {
-        Hp -= Mathf.Max(amount - LoylyRes, 10);
-
-        if(Hp <= 0 )
-        {
-            saunaPalvelu.LaitaIstumaan(this);
-        }
+        Hp -= Mathf.Max(amount - LoylyRes, 5);
     }
+
+    public bool EiJaksaSaunoa()
+    {
+        return Hp <= 0;
+    }
+
+    public void LaitaLiikkeelle(Vector3Variable uusiKohde)
+    {
+        saunaPalvelu.LaitaLiikkeelle(this);
+        myMovement.SetGoal(uusiKohde);
+    }
+
+    public void Init(int hp, int res, float speed)
+    {
+        Hp = hp;
+        LoylyRes = res;
+        myMovement = GetComponent<MovementScript>();
+        myMovement.moveSpeed = speed;
+    }
+
 
     public void ResetHp()
     {
         Hp = 100;
     }
 
-    public bool JaksaaSaunoa => !IsKlonkku 
-        && (saunaPalvelu == null || saunaPalvelu.OnkoIstumassa(this)) 
-        && LoylyRes > 0;
+    public bool JaksaaSaunoa => !IsKlonkku
+        && (saunaPalvelu == null || saunaPalvelu.OnkoIstumassa(this))
+        && Hp > 0;
 
 
-    public void GoToNext()
+    public void GoToNext(Vector3Variable target)
     {
-        Debug.Log("Next state");
+        myMovement.SetGoal(target);
     }
 
     private void OnTriggerEnter(Collider other)

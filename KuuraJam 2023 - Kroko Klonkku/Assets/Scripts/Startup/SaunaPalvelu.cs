@@ -20,8 +20,9 @@ public class SaunaPalvelu : ScriptableObject
     {
         ukko.State = Liikkeella;
     }
-    public void LaitaSuihkuun(SaunaUkko ukko)
+    public void PoistuSuihkusta(SaunaUkko ukko)
     {
+        ukko.ResetHp();
         ukko.State = Suihkussa;
     }
 

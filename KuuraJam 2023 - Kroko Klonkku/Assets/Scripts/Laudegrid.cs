@@ -11,6 +11,10 @@ public class Laudegrid : MonoBehaviour
     public SaunaUkkoState klonkkuState;
     public SaunaUkkoState movingState;
     public List<SaunaUkko> testiUkot;
+    private void Start()
+    {
+        ArrangeUkotToSeats();
+    }
     public void ArrangeUkotToSeats()
     {
         List<SaunaUkko> saunaUkkoList = saunaUkkoLista.GetList();
@@ -18,19 +22,19 @@ public class Laudegrid : MonoBehaviour
         {
             SaunaUkko ukko = saunaUkkoList[i];
             MovementScript saunaUkkoMovement = ukko.GetComponentInChildren<MovementScript>();
-            if(i >= 0 && i < laudeGrid.Count)
+            if (i >= 0 && i < laudeGrid.Count)
             {
                 saunaUkkoMovement.SetGoal(laudeGrid[i]);
             }
             else
             {
-                saunaUkkoMovement.SetGoal(laudeGrid[laudeGrid.Count-1]);
+                saunaUkkoMovement.SetGoal(laudeGrid[laudeGrid.Count - 1]);
             }
             if (ukko.State == klonkkuState)
             {
                 ukko.State = movingState;
             }
-            if(i >= klonkkuThreshold)
+            if (i >= klonkkuThreshold)
             {
                 ukko.State = klonkkuState;
             }
@@ -40,7 +44,8 @@ public class Laudegrid : MonoBehaviour
 
     public void AddTestiUkot()
     {
-        foreach(SaunaUkko saunaUkko in testiUkot){
+        foreach (SaunaUkko saunaUkko in testiUkot)
+        {
             AddUkko(saunaUkko);
         }
     }
@@ -54,11 +59,5 @@ public class Laudegrid : MonoBehaviour
     public void RemoveUkko(SaunaUkko ukko)
     {
         saunaUkkoLista.RemoveUkko(ukko);
-    }
-
-    private void Awake()
-    {
-        saunaUkkoLista = ScriptableObject.CreateInstance<SaunaUkkoLista>();
-        AddTestiUkot();
     }
 }

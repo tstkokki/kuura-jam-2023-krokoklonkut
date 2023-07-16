@@ -8,15 +8,15 @@ public class Pisteytys : ScriptableObject
     [SerializeField]
     IntVariable pisteet;
 
-    public int Pisteet
+    public void AddPoints(int amount)
     {
-        get
-        {
-            return pisteet.Value;
-        }
-        set
-        {
-            pisteet.Value = value;
-        }
+        pisteet.Value += amount;
     }
+
+    public int GetPoints()
+    {
+        return pisteet.Value;
+
+    }
+
 }
