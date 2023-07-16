@@ -18,7 +18,8 @@ public class SaunaUkko : MonoBehaviour
 
     private void Start()
     {
-        myMovement = GetComponent<MovementScript>();
+        if (myMovement == null)
+            myMovement = GetComponent<MovementScript>();
     }
 
     public void OttaaLoylya(int amount)
@@ -37,14 +38,22 @@ public class SaunaUkko : MonoBehaviour
         myMovement.SetGoal(uusiKohde);
     }
 
+    public void Init(int hp, int res, float speed)
+    {
+        Hp = hp;
+        LoylyRes = res;
+        myMovement = GetComponent<MovementScript>();
+        myMovement.moveSpeed = speed;
+    }
+
 
     public void ResetHp()
     {
         Hp = 100;
     }
 
-    public bool JaksaaSaunoa => !IsKlonkku 
-        && (saunaPalvelu == null || saunaPalvelu.OnkoIstumassa(this)) 
+    public bool JaksaaSaunoa => !IsKlonkku
+        && (saunaPalvelu == null || saunaPalvelu.OnkoIstumassa(this))
         && Hp > 0;
 
 
