@@ -6,10 +6,11 @@ public class sittingZone : MonoBehaviour
 {
     public SaunaUkkoState sittingState;
     public SaunaUkkoState movingState;
+    public SaunaUkkoState klonkkuState;
     private void OnTriggerEnter(Collider col)
     {
         var saunaUkko = col.GetComponentInChildren<SaunaUkko>();
-        if(saunaUkko != null)
+        if(saunaUkko != null && saunaUkko.State != klonkkuState)
         {
             saunaUkko.State = sittingState;
         }
@@ -17,8 +18,8 @@ public class sittingZone : MonoBehaviour
     private void OnTriggerExit(Collider col)
     {
         var saunaUkko = col.GetComponentInChildren<SaunaUkko>();
-        if (saunaUkko != null)
-        {
+        if (saunaUkko != null && saunaUkko.State != klonkkuState)
+        { 
             saunaUkko.State = movingState;
         }
     }
