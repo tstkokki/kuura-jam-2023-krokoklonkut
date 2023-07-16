@@ -131,6 +131,24 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1056035307480361022, guid: f60b2da7c06000b418f59a5e83873505,
+        type: 3}
+      propertyPath: Suihku
+      value: 
+      objectReference: {fileID: 11400000, guid: a1af8abad6098024c97840f60980c2ce,
+        type: 2}
+    - target: {fileID: 1056035307480361022, guid: f60b2da7c06000b418f59a5e83873505,
+        type: 3}
+      propertyPath: palvelu
+      value: 
+      objectReference: {fileID: 11400000, guid: 138ac01a4e9abea46adee9dc3a5f9497,
+        type: 2}
+    - target: {fileID: 1056035307480361022, guid: f60b2da7c06000b418f59a5e83873505,
+        type: 3}
+      propertyPath: SuihkuPortaali
+      value: 
+      objectReference: {fileID: 11400000, guid: 1c5f435054f77a1449387b2471fb0d55,
+        type: 2}
     - target: {fileID: 5436459362861948080, guid: f60b2da7c06000b418f59a5e83873505,
         type: 3}
       propertyPath: m_Name
@@ -395,6 +413,7 @@ PrefabInstance:
     - {fileID: 6486704025294966173, guid: f60b2da7c06000b418f59a5e83873505, type: 3}
     - {fileID: 7825951710698104467, guid: f60b2da7c06000b418f59a5e83873505, type: 3}
     - {fileID: 3445963189995989006, guid: f60b2da7c06000b418f59a5e83873505, type: 3}
+    - {fileID: 1056035307480361022, guid: f60b2da7c06000b418f59a5e83873505, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -402,6 +421,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1572245214}
+    - targetCorrespondingSourceObject: {fileID: 5436459362861948080, guid: f60b2da7c06000b418f59a5e83873505,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1572245215}
   m_SourcePrefab: {fileID: 100100000, guid: f60b2da7c06000b418f59a5e83873505, type: 3}
 --- !u!1 &294383601
 GameObject:
@@ -508,6 +531,52 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 294383601}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &425654262 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5409966913875878165, guid: 96f62432c27625e4189055609a523fb0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1469310662}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &425654264 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5291173298953614464, guid: 96f62432c27625e4189055609a523fb0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1469310662}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425654262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49bac2c4c5e519248b826fc48c187e0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &425654265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425654262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e513b8ed49114224bb23b6ba0d23d97b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: f80f96e015147d249b7bc3895e4ee5cc, type: 2}
+  _event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 425654264}
+        m_TargetAssemblyTypeName: Laudegrid, Assembly-CSharp
+        m_MethodName: ArrangeUkotToSeats
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &639055076
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -592,6 +661,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: acc1836f63d1efa4fad2529062cb33df,
         type: 2}
+    - target: {fileID: 8914321676821296459, guid: 7b78fab905453694c857a78034765be4,
+        type: 3}
+      propertyPath: Hp
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 8914321676821296459, guid: 7b78fab905453694c857a78034765be4,
         type: 3}
       propertyPath: LoylyRes
@@ -1070,6 +1144,12 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 6.76
       objectReference: {fileID: 0}
+    - target: {fileID: 3801572579611995424, guid: 7c42fbc585af576469e8a598315b3bd5,
+        type: 3}
+      propertyPath: palvelu
+      value: 
+      objectReference: {fileID: 11400000, guid: 138ac01a4e9abea46adee9dc3a5f9497,
+        type: 2}
     - target: {fileID: 8425750488971655036, guid: 7c42fbc585af576469e8a598315b3bd5,
         type: 3}
       propertyPath: m_RootOrder
@@ -1241,6 +1321,52 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1774239710}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1402536500 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5409966913875878165, guid: 96f62432c27625e4189055609a523fb0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1774239710}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1402536502 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5291173298953614464, guid: 96f62432c27625e4189055609a523fb0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1774239710}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402536500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49bac2c4c5e519248b826fc48c187e0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1402536503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402536500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e513b8ed49114224bb23b6ba0d23d97b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: f80f96e015147d249b7bc3895e4ee5cc, type: 2}
+  _event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1402536502}
+        m_TargetAssemblyTypeName: Laudegrid, Assembly-CSharp
+        m_MethodName: ArrangeUkotToSeats
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1469310662
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1520,7 +1646,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1601172648}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5409966913875878165, guid: 96f62432c27625e4189055609a523fb0,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 425654265}
   m_SourcePrefab: {fileID: 100100000, guid: 96f62432c27625e4189055609a523fb0, type: 3}
 --- !u!1001 &1506944075
 PrefabInstance:
@@ -1720,6 +1850,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Target: {fileID: 11400000, guid: 1c5f435054f77a1449387b2471fb0d55, type: 2}
   Offset: {x: 0, y: 0, z: 0}
+--- !u!114 &1572245215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572245210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fefc7bfe6b8163d4e9f1da829e78320e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portaalit:
+  - {fileID: 11400000, guid: dd3085d207901f9499ad2195f433626a, type: 2}
+  - {fileID: 11400000, guid: 1a7a998d08c9a674885dc71175f896e6, type: 2}
+  - {fileID: 11400000, guid: 4b363481f5465e5488ff7b0df1a85013, type: 2}
+  saunat:
+  - {fileID: 11400000, guid: acc1836f63d1efa4fad2529062cb33df, type: 2}
+  - {fileID: 11400000, guid: 780042bc1feb44b40926ee94907751b7, type: 2}
+  - {fileID: 11400000, guid: 3754c624508c29f48b8084ea98c0d23d, type: 2}
+  currentPortal: {fileID: 11400000, guid: 7e85cf2e8e2f501488b0041ffae240aa, type: 2}
+  ArrangeUkot: {fileID: 11400000, guid: f80f96e015147d249b7bc3895e4ee5cc, type: 2}
+  palvelu: {fileID: 11400000, guid: 138ac01a4e9abea46adee9dc3a5f9497, type: 2}
 --- !u!1 &1601172647
 GameObject:
   m_ObjectHideFlags: 0
@@ -2320,8 +2473,58 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1513929999}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5409966913875878165, guid: 96f62432c27625e4189055609a523fb0,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1402536503}
   m_SourcePrefab: {fileID: 100100000, guid: 96f62432c27625e4189055609a523fb0, type: 3}
+--- !u!1 &1787076978 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5409966913875878165, guid: 96f62432c27625e4189055609a523fb0,
+    type: 3}
+  m_PrefabInstance: {fileID: 9190817303292412073}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1787076980 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5291173298953614464, guid: 96f62432c27625e4189055609a523fb0,
+    type: 3}
+  m_PrefabInstance: {fileID: 9190817303292412073}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787076978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49bac2c4c5e519248b826fc48c187e0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1787076981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787076978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e513b8ed49114224bb23b6ba0d23d97b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: f80f96e015147d249b7bc3895e4ee5cc, type: 2}
+  _event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1787076980}
+        m_TargetAssemblyTypeName: Laudegrid, Assembly-CSharp
+        m_MethodName: ArrangeUkotToSeats
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1900503003
 GameObject:
   m_ObjectHideFlags: 0
@@ -2675,5 +2878,9 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 294383602}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5409966913875878165, guid: 96f62432c27625e4189055609a523fb0,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1787076981}
   m_SourcePrefab: {fileID: 100100000, guid: 96f62432c27625e4189055609a523fb0, type: 3}

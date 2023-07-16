@@ -14,6 +14,8 @@ public class Portal : MonoBehaviour, ITarget
     [SerializeField]
     Vector3Variable Suihku;
 
+    [SerializeField]
+    SaunaPalvelu palvelu;
 
     public void Siirry(int portaali)
     {
@@ -23,8 +25,7 @@ public class Portal : MonoBehaviour, ITarget
 
     public void OnEnter(SaunaUkko ukko)
     {
-        Debug.Log("Ukko saapui");
-        if(SuihkuPortaali != null)
+        if(SuihkuPortaali != null && palvelu.OnkoLiikkeella(ukko))
         {
             ukko.transform.position = SuihkuPortaali.Position;
             ukko.GoToNext(Suihku);
