@@ -23,7 +23,7 @@ public class SaunaUkko : MonoBehaviour
         }
     }
 
-    public void RestHp()
+    public void ResetHp()
     {
         Hp = 100;
     }
