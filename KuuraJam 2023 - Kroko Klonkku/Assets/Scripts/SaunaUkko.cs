@@ -37,6 +37,12 @@ public class SaunaUkko : MonoBehaviour
         myMovement.SetGoal(uusiKohde);
     }
 
+    public void Init(int hp, int res)
+    {
+        Hp = hp;
+        LoylyRes = res;
+    }
+
 
     public void ResetHp()
     {

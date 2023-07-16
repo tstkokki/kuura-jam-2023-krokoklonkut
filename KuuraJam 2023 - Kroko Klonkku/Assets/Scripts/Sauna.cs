@@ -19,9 +19,12 @@ public class Sauna : MonoBehaviour
     public int LoylyVoima = 30;
 
     public int saunojanPisteet = 10;
-    public int klonkkuPenalty = -60;
+    public int klonkkuPenalty = -960;
 
     Queue<SaunaUkko> heikot = new();
+
+    [SerializeField]
+    GameEvent ArrangeUkot;
 
     public void LoylyaKiukaaseen()
     {
@@ -42,6 +45,7 @@ public class Sauna : MonoBehaviour
                 ukko.LaitaLiikkeelle(portaali);
                 Saunojat.RemoveUkko(ukko);
             }
+            ArrangeUkot.Raise();
         }
     }
 
@@ -74,11 +78,12 @@ public class Sauna : MonoBehaviour
 
     private void PisteetUkosta(SaunaUkko ukko, int pisteet)
     {
-        pisteytys.Pisteet += ukko.JaksaaSaunoa
+        int amt = ukko.JaksaaSaunoa
         ? pisteet
         : ukko.IsKlonkku
         ? klonkkuPenalty
         : 0;
+        pisteytys.AddPoints(amt);
     }
 
     private void OnDisable()
