@@ -7,7 +7,7 @@ public class MovementScript : MonoBehaviour
 {
     public float moveSpeed;
     private bool enableMovement = true;
-    public Vector3Variable goal;
+    Vector3Variable goal;
     public Vector3Variable suihku;
 
     // Start is called before the first frame update
