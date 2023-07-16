@@ -24,6 +24,9 @@ public class Suihku : MonoBehaviour
     private bool ukkoIn;
     
     private bool suihkuIsOn = true;
+
+    [SerializeField]
+    SaunaPalvelu palvelu;
     
     public void AddSuihkuUkko(SaunaUkko ukko)
     {
@@ -104,7 +107,7 @@ public class Suihku : MonoBehaviour
             GetSuihkuttelijanMovementScript().SetGoal(portalLocation);
             ukkoIn = false;
             suihkuIsFree.Raise();
-            
+            palvelu.PoistuSuihkusta(GetSuihkuttelijanMovementScript().GetComponent<SaunaUkko>());
         }
     }
 
