@@ -1216,6 +1216,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: f80f96e015147d249b7bc3895e4ee5cc,
         type: 2}
+    - target: {fileID: 1807052646937107726, guid: 96f62432c27625e4189055609a523fb0,
+        type: 3}
+      propertyPath: klonkkuPenalty
+      value: -90
+      objectReference: {fileID: 0}
     - target: {fileID: 1976614130429598364, guid: 96f62432c27625e4189055609a523fb0,
         type: 3}
       propertyPath: Target
@@ -2079,6 +2084,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: f80f96e015147d249b7bc3895e4ee5cc,
         type: 2}
+    - target: {fileID: 1807052646937107726, guid: 96f62432c27625e4189055609a523fb0,
+        type: 3}
+      propertyPath: klonkkuPenalty
+      value: -90
+      objectReference: {fileID: 0}
     - target: {fileID: 1976614130429598364, guid: 96f62432c27625e4189055609a523fb0,
         type: 3}
       propertyPath: Target
@@ -2623,6 +2633,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: f80f96e015147d249b7bc3895e4ee5cc,
         type: 2}
+    - target: {fileID: 2809606259365852440, guid: 3694bfe7e99d234429dbebeba060dace,
+        type: 3}
+      propertyPath: klonkkuPenalty
+      value: -90
+      objectReference: {fileID: 0}
     - target: {fileID: 3164022287413503399, guid: 3694bfe7e99d234429dbebeba060dace,
         type: 3}
       propertyPath: m_Name

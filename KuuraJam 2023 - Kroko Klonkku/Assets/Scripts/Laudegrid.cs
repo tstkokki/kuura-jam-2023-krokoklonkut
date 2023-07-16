@@ -30,14 +30,17 @@ public class Laudegrid : MonoBehaviour
             {
                 saunaUkkoMovement.SetGoal(laudeGrid[laudeGrid.Count - 1]);
             }
-            if (ukko.State == klonkkuState)
-            {
-                ukko.State = movingState;
-            }
+            //if (ukko.State == klonkkuState)
+            //{
+            //    ukko.State = movingState;
+            //}
             if (i >= klonkkuThreshold)
             {
                 ukko.State = klonkkuState;
+                ukko.IsKlonkku = true;
             }
+            else
+                ukko.IsKlonkku =false;
 
         }
     }
