@@ -55,6 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2653298564647553735}
   - component: {fileID: 7206099134136395834}
+  - component: {fileID: 5196863376422284649}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -129,6 +130,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &5196863376422284649
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2689637519798622723}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 019051c9a6afab64bab68522e7dc1967, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3573123544258215021
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,6 +164,7 @@ GameObject:
   - component: {fileID: 1746716101719679810}
   - component: {fileID: 8578843181034959239}
   - component: {fileID: 3273181720997134535}
+  - component: {fileID: 996562771959018397}
   m_Layer: 0
   m_Name: SaunaUkko
   m_TagString: Untagged
@@ -231,6 +254,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lista: {fileID: 11400000, guid: acc1836f63d1efa4fad2529062cb33df, type: 2}
+--- !u!114 &996562771959018397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3573123544258215021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20f2434fae515be41a4cbcc743a1f6d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saunaPalvelu: {fileID: 11400000, guid: 138ac01a4e9abea46adee9dc3a5f9497, type: 2}
 --- !u!1001 &7985090133556977898
 PrefabInstance:
   m_ObjectHideFlags: 0

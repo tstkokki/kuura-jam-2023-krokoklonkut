@@ -55,6 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2395931124903192494}
   - component: {fileID: 2301424830558483152}
+  - component: {fileID: 4960000590550231765}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -129,6 +130,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &4960000590550231765
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9005358192972836929}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 019051c9a6afab64bab68522e7dc1967, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &9209606951391400125
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,6 +164,7 @@ GameObject:
   - component: {fileID: 6653177667824123097}
   - component: {fileID: 5536857468878277178}
   - component: {fileID: 7133483033192688400}
+  - component: {fileID: 1425568381639357457}
   m_Layer: 0
   m_Name: SaunaUkko (1)
   m_TagString: Untagged
@@ -231,6 +254,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lista: {fileID: 11400000, guid: 780042bc1feb44b40926ee94907751b7, type: 2}
+--- !u!114 &1425568381639357457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9209606951391400125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20f2434fae515be41a4cbcc743a1f6d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saunaPalvelu: {fileID: 11400000, guid: 138ac01a4e9abea46adee9dc3a5f9497, type: 2}
 --- !u!1001 &6464189303186737520
 PrefabInstance:
   m_ObjectHideFlags: 0

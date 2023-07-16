@@ -35,6 +35,8 @@ public class UI_IntTextRx : MonoBehaviour
 
     private void PaivitaUI()
     {
-        UI.text = observed.Value.ToString();
+        UI.text = observed.Value < 0 
+            ? $"Points: <color=\"red\">{observed.Value}</color>"
+            : $"Points: {observed.Value}";
     }
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8935936524040514831}
   - component: {fileID: 3169232415007047651}
   - component: {fileID: 5579389563475733046}
+  - component: {fileID: 5723675737636194984}
   m_Layer: 0
   m_Name: SaunaUkko (2)
   m_TagString: Untagged
@@ -102,6 +103,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lista: {fileID: 11400000, guid: 3754c624508c29f48b8084ea98c0d23d, type: 2}
+--- !u!114 &5723675737636194984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2927904606102253790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20f2434fae515be41a4cbcc743a1f6d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saunaPalvelu: {fileID: 11400000, guid: 138ac01a4e9abea46adee9dc3a5f9497, type: 2}
 --- !u!1 &3898914071614139406
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,6 +126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4055760647713734892}
   - component: {fileID: 5869206141833253294}
+  - component: {fileID: 7486063355795271108}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -186,6 +201,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &7486063355795271108
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3898914071614139406}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 019051c9a6afab64bab68522e7dc1967, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7969483778381781448
 GameObject:
   m_ObjectHideFlags: 0
